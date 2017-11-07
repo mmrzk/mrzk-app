@@ -1,0 +1,93 @@
+<aside class="sidebar row bg-secondary p-0" [class.active]="!show">
+    <div class="col-12 pr-0 pb-4">
+      <div class="col pr-0 d-flex justify-content-end relative">
+        <button class="btn1 btn btn-outline-dark m-2" [class.hide]="!show" [disabled]="!show"
+        (click)="onHideFilters()">Hide filters</button>
+      </div>
+    </div>
+    <div class="col-12">
+      <form id="asideForm" action="#" #aForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="row form-group pr-4 pl-4">
+          <label for="s1" class="col-sm-4 col-form-label">Label 1</label>
+          <div class="col-sm-8 pl-0">
+            <select name="select1" [(ngModel)]="select1" id="s1" class="form-control" (ngModelChange)="onChanged($event)">
+              <ng-container *ngFor="let item of itemsForSelect1">
+                <option [disabled]="item.selected && select1!=item.value" [value]="item.value" [attr.selected]="item.value=='Item 3'">{{item.value}}</option>
+              </ng-container>
+            </select>
+          </div>
+        </div>
+        <div class="row form-group pr-4 pl-4">
+          <label for="s2" class="col-sm-4 col-form-label">Label 2</label>
+          <div class="col-sm-8 pl-0">
+            <select name="select2" [(ngModel)]="select2" id="s2" class="form-control" (ngModelChange)="onChanged($event)">
+              <ng-container *ngFor="let item of itemsForSelect2">
+                <option [disabled]="item.selected && select2!=item.value" [value]="item.value" [attr.selected]="item.value=='Item 4'">{{item.value}}</option>
+              </ng-container>
+            </select>
+          </div>
+        </div>
+        <div class="row form-group pr-4 pl-4">
+          <label for="i1" class="col-sm-4 col-form-label">Label 3</label>
+          <div class="col-sm-8 pl-0">
+            <input type="text" name="input1" [(ngModel)]="input1" id="i1" class="form-control" placeholder="Enter text here">
+          </div>
+        </div>
+        <div class="row form-group pr-4 pl-4">
+          <label for="i2" class="col-sm-4 col-form-label">Label 4</label>
+          <div class="col-sm-8 pl-0">
+            <input type="number" name="input2" [(ngModel)]="input2" id="i2" class="form-control" placeholder="Enter phone number">
+          </div>
+        </div>
+        <fieldset class="form-group mt-5">
+          <div class="row pr-5 pl-4">
+            <legend class="col-form-legend col-sm-4">Label 5</legend>
+            <div class="col-sm-8">
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="radio" name="radio1" [(ngModel)]="option1" class="form-check-input" value="Option 1"/> Option 1
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="radio" name="radio1" [(ngModel)]="option1" class="form-check-input" value="Option 2" checked/> Option 2
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="radio" name="radio1" [(ngModel)]="option1" class="form-check-input" value="Option 3"/> Option 3
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <div class="form-group row pr-5 pl-4 mt-5">
+          <div class="col-sm-4">Label 6</div>
+          <div class="col-sm-8">
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" name="checkbox1" [(ngModel)]="checkbox1" class="form-check-input" checked>
+                CheckBox 1
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" name="checkbox2" [(ngModel)]="checkbox2" class="form-check-input" checked>
+                CheckBox 2
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" name="checkbox3" [(ngModel)]="checkbox3" class="form-check-input">
+                CheckBox 3
+              </label>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="d-flex col-12 align-items-end pr-2 pb-2 mt-5">
+      <input type="submit" form="asideForm" class="btn btn-primary ml-auto p-2 pl-4 pr-4" [class.btn-danger]="aForm.dirty" value="Apply">
+      <input type="reset" (click)="reset(aForm)" [disabled]="!aForm.dirty" form="asideForm" class="btn btn-outline-dark ml-3 p-2 pl-4 pr-4" value="Reset">
+    </div>
+  </aside>

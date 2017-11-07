@@ -1,0 +1,6 @@
+<mrzk-app-header></mrzk-app-header>
+<div class="wrapper">
+  <mrzk-app-sidebar [show]="hideFilters" (hideFiltersEvent)="onHideFilters()"></mrzk-app-sidebar>
+  <mrzk-app-content [sidebarActive]="!showFilters" (showFiltersEvent)="onShowFilters()"></mrzk-app-content>  
+</div>
+<mrzk-app-footer></mrzk-app-footer>

@@ -1,0 +1,36 @@
+.sidebar{
+  height: calc(100vh - 112px);
+  width: 350px;
+  position: fixed;
+  z-index: 1000;
+  transition: margin-left 0.3s;
+  left: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-left: 0;
+  margin-top: 56px;
+}
+.sidebar.active {
+    margin-left: -350px;
+}
+.asideForm {
+    position: absolute;
+    margin-top: 25%;
+    bottom: 0;
+    top: 0;
+}
+.relative {
+  position: relative;
+}
+.btn2 {
+  position: absolute;
+  left: 100%;
+}
+@media (max-width: 575px) {
+    .sidebar {
+        width: 100%;
+    }
+    .sidebar.active {
+      margin-left: -100%;
+    }
+}

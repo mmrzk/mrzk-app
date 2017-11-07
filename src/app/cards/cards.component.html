@@ -1,0 +1,7 @@
+<div class="row m-0">
+    <mrzk-app-card  *ngFor="let card of cardsService.cards;"
+                    [card]="card"
+                    class="col-sm-12 mt-4 pl-4 pr-4"
+                    [ngClass]="{'col-xl80-6 col-xxl-4 pl-xl80-3 pr-xl80-3': cardsService.sidebarState}">
+    </mrzk-app-card>	
+</div>
