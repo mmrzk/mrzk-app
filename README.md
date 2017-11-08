@@ -2,19 +2,19 @@
 
 ## Requirements
 
-@angular/cli: 1.4.*
-@angular/animations: 4.4.*
-@angular/common: 4.4.*
-@angular/compiler: 4.4.*
-@angular/core: 4.4.*
-@angular/forms: 4.4.*
-@angular/http: 4.4.*
-@angular/platform-browser: 4.4.*
-@angular/platform-browser-dynamic: 4.4.*
-@angular/router: 4.4.*tart
-@angular/compiler-cli: 4.4.*
-@angular/language-service: 4.4.*
-typescript: 2.3.4
+@angular/cli: 1.5.*
+@angular/animations: 5.0.*
+@angular/common: 5.0.*
+@angular/compiler: 5.0.*
+@angular/core: 5.0.*
+@angular/forms: 5.0.*
+@angular/http: 5.0.*
+@angular/platform-browser: 5.0.*
+@angular/platform-browser-dynamic: 5.0.*
+@angular/router: 5.0.*tart
+@angular/compiler-cli: 5.0.*
+@angular/language-service: 5.0.*
+typescript: 2.4.2
 node: 8.*
 
 ## Development server
