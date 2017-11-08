@@ -1,5 +1,13 @@
 # Mrzk App v0.0.1
 
+## Description
+
+This Angular app was created to demonstrate Angular knowdledge. It allows to set filters and fetch cards that match the filters. If doesn't download any data from a remote server, so it just simulates it.
+
+## Demo
+
+https://mmrzk.github.io/
+
 ## Requirements
 
 @angular/cli: 1.5.*
